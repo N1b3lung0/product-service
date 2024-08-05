@@ -14,7 +14,11 @@ public class ProductCreator {
     private final ProductRepository repository;
 
     public Product create(ProductCreateRequest request) {
-        Product product = request.toProduct(request.name(), request.description(), request.price());
+        Product product = request.toProduct(
+                request.name(),
+                request.description(),
+                request.price()
+        );
         Product saved = repository.save(product);
         log.info("Product created successfully: {}", saved);
         return saved;
