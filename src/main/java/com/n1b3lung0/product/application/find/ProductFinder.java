@@ -1,6 +1,6 @@
 package com.n1b3lung0.product.application.find;
 
-import com.n1b3lung0.product.infrastructure.ProductMongoRepository;
+import com.n1b3lung0.product.domain.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.List;
 @Slf4j
 public class ProductFinder {
 
-    private final ProductMongoRepository repository;
+    private final ProductRepository repository;
 
     public List<ProductResponse> findAll() {
         return repository.findAll()

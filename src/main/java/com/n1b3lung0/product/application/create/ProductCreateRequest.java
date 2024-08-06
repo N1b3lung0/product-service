@@ -5,7 +5,6 @@ import com.n1b3lung0.product.domain.Product;
 import java.math.BigDecimal;
 
 public record ProductCreateRequest(
-        String id,
         String name,
         String description,
         BigDecimal price
