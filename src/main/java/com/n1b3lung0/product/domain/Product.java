@@ -19,8 +19,11 @@ public final class Product {
 
     @With @Id
     private final String id;
+    @With
     private final String name;
+    @With
     private final String description;
+    @With
     private final BigDecimal price;
 
     public static Product create(String name, String description, BigDecimal price) {
